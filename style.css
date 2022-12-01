@@ -1,0 +1,66 @@
+/*.container{
+    width: 90%;
+    margin: auto;
+    div{
+        display: flex;
+        flex-direction: column;
+        border: solid 1px black;
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+}*/
+.carte {
+  width: 302px;
+  height: 299px;
+  margin: 10px;
+  float: left; /* stack each div horizontally */
+}
+.carte img {
+  border-radius: 10px;
+}
+.carte .div_back {
+  /* style the maincontainer class with all child div's of class .back */
+  position: absolute;
+  transform: perspective(600px) rotateY(180deg);
+  background: #262626;
+  color: #fff;
+  width: 302px;
+  height: 290px;
+  border-radius: 10px;
+  padding: 5px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
+  transition: transform 0.5s linear 0s;
+}
+.carte .div_back h2 {
+  position: absolute;
+}
+.carte .div_back p {
+  position: absolute;
+  top: 50px;
+  font-size: 15px;
+}
+.carte .div_back :hover {
+  transform: perspective(600px) rotateY(0deg);
+}
+.carte .div_front {
+  /* style the maincontainer class with all child div's of class .front */
+  position: absolute;
+  transform: perspective(600px) rotateY(0deg);
+  width: 302px;
+  height: 290px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
+  transition: transform 0.5s linear 0s;
+}
+.carte .div_front h2 {
+  position: absolute;
+  padding: 10px;
+  top: 200px;
+  color: #000;
+}
+.carte .div_front :hover {
+  transform: perspective(600px) rotateY(-180deg);
+}/*# sourceMappingURL=style.css.map */

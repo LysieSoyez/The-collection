@@ -1,0 +1,67 @@
+/*.container{
+    width: 90%;
+    margin: auto;
+    div{
+        display: flex;
+        flex-direction: column;
+        border: solid 1px black;
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+}*/
+
+.carte{
+    width: 302px;
+    height: 299px;
+    margin: 10px;
+    float: left; /* stack each div horizontally */
+    img {
+        border-radius: 10px;
+    }
+    .div_back{
+        /* style the maincontainer class with all child div's of class .back */
+        position: absolute;
+        transform: perspective(600px) rotateY(180deg);
+        background: #262626;
+        color: #fff;
+        width: 302px;
+        height: 290px;
+        border-radius: 10px;
+        padding: 5px;
+        backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
+        transition: transform .5s linear 0s;
+        h2{
+            position: absolute;
+        }
+        p{
+            position: absolute;
+            top: 50px;
+            font-size: 15px; 
+        }
+        :hover{
+            transform: perspective(600px) rotateY(0deg);
+        }
+    }
+    .div_front{
+        /* style the maincontainer class with all child div's of class .front */
+        position: absolute;
+        transform: perspective(600px) rotateY(0deg);
+    
+        width: 302px;
+        height: 290px;
+    
+        backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
+        transition: transform .5s linear 0s;
+        h2{
+            position: absolute;
+            padding: 10px;
+            top: 200px;
+            color: #000;
+        }
+        :hover{
+            transform: perspective(600px) rotateY(-180deg);
+        }
+    }
+}
