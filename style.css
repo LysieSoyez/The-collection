@@ -1,66 +1,105 @@
-/*.container{
-    width: 90%;
-    margin: auto;
-    div{
-        display: flex;
-        flex-direction: column;
-        border: solid 1px black;
-        img{
-            height: 100%;
-            width: 100%;
-        }
-    }
-}*/
+body {
+  background-image: url(./assets/page-back.jpg);
+}
+
+header h1 {
+  font-family: "Alice", serif;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 10vw;
+}
+header p {
+  font-family: "Alice", serif;
+  text-align: center;
+  font-size: 4vw;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .carte {
-  width: 302px;
-  height: 299px;
-  margin: 10px;
+  width: 62vw;
+  height: 80vw;
+  margin: 1vw;
   float: left; /* stack each div horizontally */
 }
-.carte img {
-  border-radius: 10px;
-}
 .carte .div_back {
-  /* style the maincontainer class with all child div's of class .back */
   position: absolute;
   transform: perspective(600px) rotateY(180deg);
   background: #262626;
   color: #fff;
-  width: 302px;
-  height: 290px;
+  width: 60vw;
+  height: 79vw;
   border-radius: 10px;
-  padding: 5px;
+  padding: 1vw;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
+          backface-visibility: hidden;
   transition: transform 0.5s linear 0s;
 }
 .carte .div_back h2 {
-  position: absolute;
+  text-align: center;
+  font-size: 5vw;
+  font-family: "Alice", serif;
 }
-.carte .div_back p {
-  position: absolute;
-  top: 50px;
-  font-size: 15px;
+.carte .div_back .autor_year {
+  display: flex;
+  justify-content: space-between;
+}
+.carte .div_back .autor_year .auteur {
+  font-style: italic;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3vw;
+  margin: 0;
+}
+.carte .div_back .autor_year .year {
+  font-family: "Roboto Mono", monospace;
+  margin: 0;
+  font-size: 3vw;
+}
+.carte .div_back .page {
+  font-family: "Roboto Mono", monospace;
+  font-size: 3vw;
+}
+.carte .div_back .resume {
+  text-align: center;
+  font-size: 2.5vw;
+  margin: auto;
+  font-family: "Alice", serif;
 }
 .carte .div_back :hover {
   transform: perspective(600px) rotateY(0deg);
 }
 .carte .div_front {
-  /* style the maincontainer class with all child div's of class .front */
   position: absolute;
   transform: perspective(600px) rotateY(0deg);
-  width: 302px;
-  height: 290px;
+  width: 60vw;
+  height: 79vw;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
+          backface-visibility: hidden;
   transition: transform 0.5s linear 0s;
 }
-.carte .div_front h2 {
-  position: absolute;
-  padding: 10px;
-  top: 200px;
-  color: #000;
+.carte .div_front .div_images {
+  background-color: #262626;
+  background-size: cover;
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
-.carte .div_front :hover {
+.carte .div_front .div_images img {
+  border-radius: 10px;
+  margin: auto;
+  height: 95%;
+}
+
+.carte:hover > .div_front {
   transform: perspective(600px) rotateY(-180deg);
+}
+
+.carte:hover > .div_back {
+  transform: perspective(600px) rotateY(0deg);
 }/*# sourceMappingURL=style.css.map */

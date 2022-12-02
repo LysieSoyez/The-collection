@@ -1,67 +1,112 @@
-/*.container{
-    width: 90%;
-    margin: auto;
-    div{
-        display: flex;
-        flex-direction: column;
-        border: solid 1px black;
-        img{
-            height: 100%;
-            width: 100%;
-        }
+body{
+    background-image: url(./assets/page-back.jpg);
+}
+header{
+    h1{
+        font-family: 'Alice', serif;
+        text-align: center;
+        text-decoration: underline;
+        font-size: 10vw;
     }
-}*/
-
+    p{
+        font-family: 'Alice', serif;
+        text-align: center;
+        font-size: 4vw;
+    }
+}
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 .carte{
-    width: 302px;
-    height: 299px;
-    margin: 10px;
+    width: 62vw;
+    height: 80vw;
+    margin: 1vw;
     float: left; /* stack each div horizontally */
-    img {
-        border-radius: 10px;
-    }
+    
     .div_back{
-        /* style the maincontainer class with all child div's of class .back */
         position: absolute;
         transform: perspective(600px) rotateY(180deg);
         background: #262626;
         color: #fff;
-        width: 302px;
-        height: 290px;
+        width: 60vw;
+        height: 79vw;
         border-radius: 10px;
-        padding: 5px;
-        backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
+        padding: 1vw;
+        backface-visibility: hidden;
         transition: transform .5s linear 0s;
+
         h2{
-            position: absolute;
+            text-align: center;
+            font-size: 5vw;
+            font-family: 'Alice', serif;
         }
-        p{
-            position: absolute;
-            top: 50px;
-            font-size: 15px; 
+        .autor_year{
+            display: flex;
+            justify-content: space-between;
+            .auteur{
+            font-style: italic;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 3vw;
+            margin: 0;
+            }
+            .year{
+            font-family: 'Roboto Mono', monospace;
+            margin: 0;
+            font-size: 3vw;
+            }
         }
+        .page{
+            font-family: 'Roboto Mono', monospace;
+            font-size: 3vw;
+        }
+        .resume{
+            text-align: center;
+            font-size: 2.5vw;
+            margin: auto;
+            font-family: 'Alice', serif;
+        }
+           
         :hover{
             transform: perspective(600px) rotateY(0deg);
         }
     }
     .div_front{
-        /* style the maincontainer class with all child div's of class .front */
         position: absolute;
         transform: perspective(600px) rotateY(0deg);
     
-        width: 302px;
-        height: 290px;
+        width: 60vw;
+        height: 79vw;
     
-        backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
+        backface-visibility: hidden;
         transition: transform .5s linear 0s;
-        h2{
-            position: absolute;
-            padding: 10px;
-            top: 200px;
-            color: #000;
-        }
-        :hover{
-            transform: perspective(600px) rotateY(-180deg);
+
+        .div_images{
+            background-color: #262626;
+            background-size: cover;
+            border-radius: 18px;
+            
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            img {
+            border-radius: 10px;
+            margin: auto;
+            height: 95%;
+            }
         }
     }
+}
+
+//card animation
+.carte:hover > .div_front
+{
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+.carte:hover > .div_back
+{
+    transform: perspective(600px) rotateY(0deg);
 }
