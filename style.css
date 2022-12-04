@@ -117,15 +117,15 @@ body .carte:hover > .div_back {
     font-size: 3vw;
   }
   main .carte {
-    width: 40vw;
-    height: 60vw;
+    width: 30vw;
+    height: 50vw;
   }
   main .carte .div_back {
-    width: 35vw;
-    height: 55vw;
+    width: 25vw;
+    height: 45vw;
   }
   main .carte .div_back h2 {
-    font-size: 4vw;
+    font-size: 3vw;
   }
   main .carte .div_back .autor_year .auteur {
     font-size: 2.5vw;
@@ -137,22 +137,22 @@ body .carte:hover > .div_back {
     font-size: 2vw;
   }
   main .carte .div_back .resume {
-    font-size: 1.5vw;
+    font-size: 1vw;
   }
   main .carte .div_back .div_icons a img {
-    height: 5vw;
-    width: 5vw;
+    height: 4vw;
+    width: 4vw;
     bottom: 2vw;
   }
   main .carte .div_front {
-    width: 35vw;
-    height: 55vw;
+    width: 25vw;
+    height: 45vw;
   }
   main .carte .div_front .div_images {
     width: 100%;
     height: 100%;
   }
   main .carte .div_front .div_images img {
-    height: 85%;
+    height: 75%;
   }
 }/*# sourceMappingURL=style.css.map */
