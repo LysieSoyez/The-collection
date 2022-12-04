@@ -22,7 +22,7 @@ body .container {
 body .carte {
   width: 70vw;
   height: 90vw;
-  margin: 1vws;
+  margin: 1vw;
 }
 body .carte .div_back {
   position: absolute;
@@ -110,92 +110,49 @@ body .carte:hover > .div_back {
 }
 
 @media screen and (min-width: 1024px) {
-  main .container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  main header h1 {
+    font-size: 6vw;
+  }
+  main header p {
+    font-size: 3vw;
   }
   main .carte {
-    width: 50vw;
-    height: 70vw;
-    margin: 1vws;
+    width: 40vw;
+    height: 60vw;
   }
   main .carte .div_back {
-    position: absolute;
-    transform: perspective(600px) rotateY(180deg);
-    background: #262626;
-    color: #fff;
-    width: 65vw;
-    height: 85vw;
-    border-radius: 10px;
-    padding: 2vw;
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-    transition: transform 0.5s linear 0s;
+    width: 35vw;
+    height: 55vw;
   }
   main .carte .div_back h2 {
-    text-align: center;
-    font-size: 8vw;
-    font-family: "Alice", serif;
-    margin-top: 1%;
-  }
-  main .carte .div_back .autor_year {
-    display: flex;
-    justify-content: space-between;
+    font-size: 4vw;
   }
   main .carte .div_back .autor_year .auteur {
-    font-style: italic;
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 3.5vw;
-    margin: 0;
+    font-size: 2.5vw;
   }
   main .carte .div_back .autor_year .year {
-    font-family: "Roboto Mono", monospace;
-    margin: 0;
-    font-size: 3vw;
+    font-size: 2vw;
   }
   main .carte .div_back .page {
-    font-family: "Roboto Mono", monospace;
-    font-size: 3vw;
+    font-size: 2vw;
   }
   main .carte .div_back .resume {
-    text-align: center;
-    font-size: 2.5vw;
-    margin: auto;
-    font-family: "Alice", serif;
-  }
-  main .carte .div_back .div_icons {
-    display: flex;
-    justify-content: space-evenly;
-    bottom: auto;
+    font-size: 1.5vw;
   }
   main .carte .div_back .div_icons a img {
-    height: 10vw;
-    width: 10vw;
-    position: absolute;
+    height: 5vw;
+    width: 5vw;
     bottom: 2vw;
   }
   main .carte .div_front {
-    position: absolute;
-    transform: perspective(600px) rotateY(0deg);
-    width: 65vw;
-    height: 85vw;
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-    transition: transform 0.5s linear 0s;
+    width: 35vw;
+    height: 55vw;
   }
   main .carte .div_front .div_images {
-    background-color: #262626;
-    background-size: cover;
-    border-radius: 18px;
-    display: flex;
-    justify-content: center;
     width: 100%;
     height: 100%;
   }
   main .carte .div_front .div_images img {
-    border-radius: 10px;
-    margin: auto;
-    height: 95%;
+    height: 85%;
   }
 }/*# sourceMappingURL=style.css.map */
