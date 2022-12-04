@@ -1,87 +1,94 @@
 body {
   background-image: url(./assets/page-back.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-
-header h1 {
+body header h1 {
   font-family: "Alice", serif;
   text-align: center;
   text-decoration: underline;
-  font-size: 10vw;
+  font-size: 8vw;
 }
-header p {
+body header p {
   font-family: "Alice", serif;
   text-align: center;
   font-size: 4vw;
 }
-
-.container {
+body .container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-
-.carte {
-  width: 62vw;
-  height: 80vw;
-  margin: 1vw;
-  float: left; /* stack each div horizontally */
+body .carte {
+  width: 70vw;
+  height: 90vw;
+  margin: 1vws;
 }
-.carte .div_back {
+body .carte .div_back {
   position: absolute;
   transform: perspective(600px) rotateY(180deg);
   background: #262626;
   color: #fff;
-  width: 60vw;
-  height: 79vw;
+  width: 65vw;
+  height: 85vw;
   border-radius: 10px;
-  padding: 1vw;
+  padding: 2vw;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   transition: transform 0.5s linear 0s;
 }
-.carte .div_back h2 {
+body .carte .div_back h2 {
   text-align: center;
-  font-size: 5vw;
+  font-size: 8vw;
   font-family: "Alice", serif;
+  margin-top: 1%;
 }
-.carte .div_back .autor_year {
+body .carte .div_back .autor_year {
   display: flex;
   justify-content: space-between;
 }
-.carte .div_back .autor_year .auteur {
+body .carte .div_back .autor_year .auteur {
   font-style: italic;
   font-family: "Josefin Sans", sans-serif;
-  font-size: 3vw;
+  font-size: 3.5vw;
   margin: 0;
 }
-.carte .div_back .autor_year .year {
+body .carte .div_back .autor_year .year {
   font-family: "Roboto Mono", monospace;
   margin: 0;
   font-size: 3vw;
 }
-.carte .div_back .page {
+body .carte .div_back .page {
   font-family: "Roboto Mono", monospace;
   font-size: 3vw;
 }
-.carte .div_back .resume {
+body .carte .div_back .resume {
   text-align: center;
   font-size: 2.5vw;
   margin: auto;
   font-family: "Alice", serif;
 }
-.carte .div_back :hover {
-  transform: perspective(600px) rotateY(0deg);
+body .carte .div_back .div_icons {
+  display: flex;
+  justify-content: space-evenly;
+  bottom: auto;
 }
-.carte .div_front {
+body .carte .div_back .div_icons a img {
+  height: 10vw;
+  width: 10vw;
+  position: absolute;
+  bottom: 2vw;
+}
+body .carte .div_front {
   position: absolute;
   transform: perspective(600px) rotateY(0deg);
-  width: 60vw;
-  height: 79vw;
+  width: 65vw;
+  height: 85vw;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   transition: transform 0.5s linear 0s;
 }
-.carte .div_front .div_images {
+body .carte .div_front .div_images {
   background-color: #262626;
   background-size: cover;
   border-radius: 18px;
@@ -90,16 +97,105 @@ header p {
   width: 100%;
   height: 100%;
 }
-.carte .div_front .div_images img {
+body .carte .div_front .div_images img {
   border-radius: 10px;
   margin: auto;
   height: 95%;
 }
-
-.carte:hover > .div_front {
+body .carte:hover > .div_front {
   transform: perspective(600px) rotateY(-180deg);
 }
-
-.carte:hover > .div_back {
+body .carte:hover > .div_back {
   transform: perspective(600px) rotateY(0deg);
+}
+
+@media screen and (min-width: 1024px) {
+  main .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  main .carte {
+    width: 50vw;
+    height: 70vw;
+    margin: 1vws;
+  }
+  main .carte .div_back {
+    position: absolute;
+    transform: perspective(600px) rotateY(180deg);
+    background: #262626;
+    color: #fff;
+    width: 65vw;
+    height: 85vw;
+    border-radius: 10px;
+    padding: 2vw;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    transition: transform 0.5s linear 0s;
+  }
+  main .carte .div_back h2 {
+    text-align: center;
+    font-size: 8vw;
+    font-family: "Alice", serif;
+    margin-top: 1%;
+  }
+  main .carte .div_back .autor_year {
+    display: flex;
+    justify-content: space-between;
+  }
+  main .carte .div_back .autor_year .auteur {
+    font-style: italic;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 3.5vw;
+    margin: 0;
+  }
+  main .carte .div_back .autor_year .year {
+    font-family: "Roboto Mono", monospace;
+    margin: 0;
+    font-size: 3vw;
+  }
+  main .carte .div_back .page {
+    font-family: "Roboto Mono", monospace;
+    font-size: 3vw;
+  }
+  main .carte .div_back .resume {
+    text-align: center;
+    font-size: 2.5vw;
+    margin: auto;
+    font-family: "Alice", serif;
+  }
+  main .carte .div_back .div_icons {
+    display: flex;
+    justify-content: space-evenly;
+    bottom: auto;
+  }
+  main .carte .div_back .div_icons a img {
+    height: 10vw;
+    width: 10vw;
+    position: absolute;
+    bottom: 2vw;
+  }
+  main .carte .div_front {
+    position: absolute;
+    transform: perspective(600px) rotateY(0deg);
+    width: 65vw;
+    height: 85vw;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    transition: transform 0.5s linear 0s;
+  }
+  main .carte .div_front .div_images {
+    background-color: #262626;
+    background-size: cover;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  main .carte .div_front .div_images img {
+    border-radius: 10px;
+    margin: auto;
+    height: 95%;
+  }
 }/*# sourceMappingURL=style.css.map */

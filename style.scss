@@ -1,112 +1,240 @@
 body{
     background-image: url(./assets/page-back.jpg);
-}
-header{
-    h1{
-        font-family: 'Alice', serif;
-        text-align: center;
-        text-decoration: underline;
-        font-size: 10vw;
-    }
-    p{
-        font-family: 'Alice', serif;
-        text-align: center;
-        font-size: 4vw;
-    }
-}
-.container{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.carte{
-    width: 62vw;
-    height: 80vw;
-    margin: 1vw;
-    float: left; /* stack each div horizontally */
-    
-    .div_back{
-        position: absolute;
-        transform: perspective(600px) rotateY(180deg);
-        background: #262626;
-        color: #fff;
-        width: 60vw;
-        height: 79vw;
-        border-radius: 10px;
-        padding: 1vw;
-        backface-visibility: hidden;
-        transition: transform .5s linear 0s;
+    background-repeat: no-repeat;
+    background-size: cover;
 
-        h2{
-            text-align: center;
-            font-size: 5vw;
+    header{
+
+        h1{
             font-family: 'Alice', serif;
-        }
-        .autor_year{
-            display: flex;
-            justify-content: space-between;
-            .auteur{
-            font-style: italic;
-            font-family: 'Josefin Sans', sans-serif;
-            font-size: 3vw;
-            margin: 0;
-            }
-            .year{
-            font-family: 'Roboto Mono', monospace;
-            margin: 0;
-            font-size: 3vw;
-            }
-        }
-        .page{
-            font-family: 'Roboto Mono', monospace;
-            font-size: 3vw;
-        }
-        .resume{
             text-align: center;
-            font-size: 2.5vw;
-            margin: auto;
-            font-family: 'Alice', serif;
+            text-decoration: underline;
+            font-size: 8vw;
         }
-           
-        :hover{
-            transform: perspective(600px) rotateY(0deg);
+        p{
+            font-family: 'Alice', serif;
+            text-align: center;
+            font-size: 4vw;
         }
     }
-    .div_front{
-        position: absolute;
-        transform: perspective(600px) rotateY(0deg);
-    
-        width: 60vw;
-        height: 79vw;
-    
-        backface-visibility: hidden;
-        transition: transform .5s linear 0s;
 
-        .div_images{
-            background-color: #262626;
-            background-size: cover;
-            border-radius: 18px;
+    .container{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .carte{
+        width: 70vw;
+        height: 90vw;
+        margin: 1vws;
+    
+        .div_back{
+            position: absolute;
+            transform: perspective(600px) rotateY(180deg);
+            background: #262626;
+            color: #fff;
+            width: 65vw;
+            height: 85vw;
+            border-radius: 10px;
+            padding: 2vw;
+            backface-visibility: hidden;
+            transition: transform .5s linear 0s;
+
+            h2{
+                text-align: center;
+                font-size: 8vw;
+                font-family: 'Alice', serif;
+                margin-top: 1%;
+            }
+
+            .autor_year{
+                display: flex;
+                justify-content: space-between;
             
+                .auteur{
+                    font-style: italic;
+                    font-family: 'Josefin Sans', sans-serif;
+                    font-size: 3.5vw;
+                    margin: 0;
+                }
+            
+                .year{
+                    font-family: 'Roboto Mono', monospace;
+                    margin: 0;
+                    font-size: 3vw;
+                }
+            }
+
+            .page{
+                font-family: 'Roboto Mono', monospace;
+                font-size: 3vw;
+            }
+
+            .resume{
+                text-align: center;
+                font-size: 2.5vw;
+                margin: auto;
+                font-family: 'Alice', serif;
+            }
+                
+            .div_icons{
+                display: flex;
+                justify-content: space-evenly;
+                bottom: auto;
+
+                a{
+                    img{
+                        height: 10vw;
+                        width: 10vw;
+                        position: absolute;
+                        bottom: 2vw;
+                    }
+                }
+            }
+        }
+    
+        .div_front{
+            position: absolute;
+            transform: perspective(600px) rotateY(0deg);
+            width: 65vw;
+            height: 85vw;
+            backface-visibility: hidden;
+            transition: transform .5s linear 0s;
+
+            .div_images{
+                background-color: #262626;
+                background-size: cover;
+                border-radius: 18px;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+            
+                img {
+                    border-radius: 10px;
+                    margin: auto;
+                    height: 95%;
+                }
+            }
+        }
+    }
+
+    //card animation
+    .carte:hover > .div_front{
+    
+         transform: perspective(600px) rotateY(-180deg);
+    }
+
+    .carte:hover > .div_back{
+
+        transform: perspective(600px) rotateY(0deg);
+    }
+}
+
+@media screen and (min-width:1024px){
+    main{
+        
+        .container{
             display: flex;
             justify-content: center;
-            width: 100%;
-            height: 100%;
-            img {
-            border-radius: 10px;
-            margin: auto;
-            height: 95%;
+            flex-wrap: wrap;
+        }
+    
+        .carte{
+            width: 50vw;
+            height: 70vw;
+            margin: 1vws;
+        
+            .div_back{
+                position: absolute;
+                transform: perspective(600px) rotateY(180deg);
+                background: #262626;
+                color: #fff;
+                width: 65vw;
+                height: 85vw;
+                border-radius: 10px;
+                padding: 2vw;
+                backface-visibility: hidden;
+                transition: transform .5s linear 0s;
+    
+                h2{
+                    text-align: center;
+                    font-size: 8vw;
+                    font-family: 'Alice', serif;
+                    margin-top: 1%;
+                }
+    
+                .autor_year{
+                    display: flex;
+                    justify-content: space-between;
+                
+                    .auteur{
+                        font-style: italic;
+                        font-family: 'Josefin Sans', sans-serif;
+                        font-size: 3.5vw;
+                        margin: 0;
+                    }
+                
+                    .year{
+                        font-family: 'Roboto Mono', monospace;
+                        margin: 0;
+                        font-size: 3vw;
+                    }
+                }
+    
+                .page{
+                    font-family: 'Roboto Mono', monospace;
+                    font-size: 3vw;
+                }
+    
+                .resume{
+                    text-align: center;
+                    font-size: 2.5vw;
+                    margin: auto;
+                    font-family: 'Alice', serif;
+                }
+                    
+                .div_icons{
+                    display: flex;
+                    justify-content: space-evenly;
+                    bottom: auto;
+    
+                    a{
+                        img{
+                            height: 10vw;
+                            width: 10vw;
+                            position: absolute;
+                            bottom: 2vw;
+                        }
+                    }
+                }
+            }
+        
+            .div_front{
+                position: absolute;
+                transform: perspective(600px) rotateY(0deg);
+                width: 65vw;
+                height: 85vw;
+                backface-visibility: hidden;
+                transition: transform .5s linear 0s;
+    
+                .div_images{
+                    background-color: #262626;
+                    background-size: cover;
+                    border-radius: 18px;
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    height: 100%;
+                
+                    img {
+                        border-radius: 10px;
+                        margin: auto;
+                        height: 95%;
+                    }
+                }
             }
         }
     }
-}
-
-//card animation
-.carte:hover > .div_front
-{
-    transform: perspective(600px) rotateY(-180deg);
-}
-
-.carte:hover > .div_back
-{
-    transform: perspective(600px) rotateY(0deg);
 }
