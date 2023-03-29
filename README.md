@@ -14,3 +14,7 @@ It's my first time using a json file for a project.
 ## What can be improved 
 - The desktop design
 - Organising files into folders
+
+
+## 🔗 Links
+https://lysiesoyez.github.io/The-collection/
