@@ -7,8 +7,8 @@ It's my first time using a json file for a project.
 
 ## Screenshots
 
-<img src="./assets/images/theCollection (1).png/" alt="phone display" width="200"/>
-<img src="./assets/images/thecollection (2).png/" alt="desktop display" height="200"/>
+<img src="./assets/theCollection (1).png/" alt="first image og the collection" width="200"/>
+<img src="./assets/thecollection (2).png/" alt="second image of the collection" height="200"/>
 
 
 ## What can be improved 
